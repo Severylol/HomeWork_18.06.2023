@@ -1,39 +1,35 @@
 ﻿// Console.Clear();
-//         int M = 1; // Значение M
-//         int N = 15; // Значение N
+//         int m = 4;
+//         int n = 8;
+//         int sum = SumNaturalNumbers(m, n);
+//         Console.WriteLine("Сумма натур. чисел от " + m + " до " + n + " = " + sum);
 
-//         int sum = CalculateSum(M, N);
-
-//         Console.WriteLine("Сумма натуральных элементов: " + sum);
-
-//     static int CalculateSum(int M, int N)
+//     static int SumNaturalNumbers(int m, int n)
 //     {
-//         int sum = 0;
-
-//         for (int i = M; i <= N; i++)
+//         if (m > n)
 //         {
-//             sum += i;
+//             return 0;
 //         }
-
-//         return sum;
+//         else
+//         {
+//             return m + SumNaturalNumbers(m + 1, n);
+//         }
 //     }
 
 Console.Clear();
-        int M = 4; // Значение M
-        int N = 8; // Значение N
+        int m = 1;
+        int n = 15;
+        int sum = SumNaturalNumbers(m, n);
+        Console.WriteLine("Сумма натур. чисел от " + m + " до " + n + " = " + sum);
 
-        int sum = CalculateSum(M, N);
-
-        Console.WriteLine("Сумма натуральных элементов: " + sum);
-
-    static int CalculateSum(int M, int N)
+    static int SumNaturalNumbers(int m, int n)
     {
-        int sum = 0;
-
-        for (int i = M; i <= N; i++)
+        if (m > n)
         {
-            sum += i;
+            return 0;
         }
-
-        return sum;
+        else
+        {
+            return m + SumNaturalNumbers(m + 1, n);
+        }
     }
